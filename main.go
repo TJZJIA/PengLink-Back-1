@@ -1,6 +1,7 @@
 package main
 
 import (
+	"PengLink-Back-1/config"
 	"PengLink-Back-1/router"
 	"fmt"
 
@@ -8,6 +9,7 @@ import (
 )
 
 func main() {
+	config.InitDB()
 	r := gin.Default()
 	router.SetupRouter(r)
 	fmt.Println("Hello World!")
