@@ -1,16 +1,15 @@
 package main
 
 import (
-	"PengLink-Back-1/internal/auth"
 	"PengLink-Back-1/router"
+	"fmt"
 
 	"github.com/gin-gonic/gin"
-	// ...existing code...
 )
 
 func main() {
 	r := gin.Default()
-	r.POST("/login", auth.LoginHandler)
 	router.SetupRouter(r)
+	fmt.Println("Hello World!")
 	r.Run(":8080") // 监听并在 0.0.0.0:8080 上启动服务
 }
